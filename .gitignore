@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv*/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# difuzzi outputs and caches
+difuzzi-out/
+difuzzi-demo-out/
+demo-out/
+demo/demo-out/
+crash-*
+third_party/

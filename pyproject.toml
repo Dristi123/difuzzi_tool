@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "difuzzi"
+version = "0.1.0"
+description = "Functional evaluation of code without tests: LLM-written input generators and coverage-guided differential fuzzing of a reference and a candidate program (Python and Java)"
+readme = "README.md"
+requires-python = ">=3.12"   # Atheris 3.1 ships wheels for Python 3.12-3.14
+dependencies = [
+    "atheris>=2.3",
+    "coverage>=7.4",
+    "requests>=2.31",
+]
+keywords = ["differential testing", "fuzzing", "code evaluation", "LLM", "Atheris", "Jazzer"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Java",
+    "Topic :: Software Development :: Testing",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+]
+
+[project.scripts]
+difuzzi = "difuzzi.cli:main"
+difuzzi-setup = "difuzzi.java_deps:main"
+difuzzi-demo = "difuzzi.demo:main"
+
+[tool.setuptools]
+packages = ["difuzzi"]
+
+[tool.setuptools.package-data]
+# the Java runtime is compiled on first use; the generators are the pre-generated ones of the bundled examples
+difuzzi = ["java/difuzzi/rt/*.java", "generators/*.py", "generators/*.java"]

@@ -1,0 +1,1 @@
+Return True if the integer n is a prime number, and False otherwise.

@@ -1,0 +1,10 @@
+# The image needs only the package and its examples (see Dockerfile); everything else stays out of the
+# build context, in particular virtual environments and local caches.
+*
+!pyproject.toml
+!README.md
+!difuzzi/
+!examples/
+**/__pycache__
+**/*.pyc
+**/difuzzi-out

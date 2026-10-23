@@ -1,0 +1,1 @@
+Given a list of integers xs sorted in ascending order without duplicates and an integer t, return the index of t in xs, or -1 if t is not present.
