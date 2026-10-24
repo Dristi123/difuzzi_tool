@@ -174,7 +174,7 @@ difuzzi R C --examples FILE [options]
 
 # 🧠 How it works
 
-![Difuzzi workflow](docs/workflow.png)
+![Difuzzi workflow](docs/image.png)
 
 1. **Input generator synthesis:** from the reference, an example input and a description, an LLM writes a small function that turns the fuzzer's random bytes into valid inputs. It is written once and reused for every candidate.
 2. **Validation and repair:** the generator must compile, always produce an input, and produce only inputs the reference accepts. If a check fails, the problems go back to the LLM.
